@@ -1,8 +1,8 @@
-import { Button } from "ui";
+import { Button } from "@pac/ui";
 
 export default function Docs() {
   return (
-    <div>
+    <div className="bg-black text-white">
       <h1>Docs</h1>
       <Button />
     </div>

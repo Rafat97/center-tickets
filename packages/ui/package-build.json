@@ -4,13 +4,18 @@
   "scripts": {
     "rollup": "rollup -c"
   },
-  "workspace": {
+  "workspace":{
     "nohoist": [
       "**"
     ]
   },
-  "main": "src/index.tsx",
-  "types": "src/index.tsx",
+  
+  "main": "dist/cjs/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -23,13 +28,7 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/container-queries": "^0.1.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.9",
     "@types/react": "^17.0.34",
-    "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-macros": "^3.1.0",
@@ -41,11 +40,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "tailwindcss": "^3.2.4",
     "tslib": "^2.5.0",
     "typescript": "^4.4.4"
-  },
-  "dependencies": {
-    "tailwind-merge": "^1.9.0"
   }
 }
