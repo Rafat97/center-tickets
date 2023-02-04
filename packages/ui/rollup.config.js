@@ -30,16 +30,16 @@ export default [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
     plugins: [
-      // external(),
+      external(),
       peerDepsExternal(),
       resolve(),
       commonjs(),
