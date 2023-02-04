@@ -1,0 +1,53 @@
+{
+  "name": "storybook",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:vite": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build-storybook": "build-storybook",
+    "dev": "concurrently \"yarn:watch:*\" ",
+    "watch:storybook": "start-storybook -p 6006",
+    "watch:css": "npx tailwindcss -i ./src/index.css -o ./public/tailwind.css --watch",
+    "watch:vite": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^6.5.16",
+    "@pac/twconfig": "*",
+    "@pac/ui": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@storybook/addon-a11y": "^6.5.16",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-backgrounds": "^6.5.16",
+    "@storybook/addon-controls": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-storysource": "^6.5.16",
+    "@storybook/addon-toolbars": "^6.5.16",
+    "@storybook/addon-viewport": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.0",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
+    "concurrently": "^7.6.0",
+    "postcss": "^8.4.21",
+    "storybook-addon-designs": "^6.3.1",
+    "storybook-dark-mode": "^2.0.5",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

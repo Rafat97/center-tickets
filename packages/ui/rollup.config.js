@@ -30,12 +30,12 @@ export default [
       {
         file: "dist/cjs/index.js",
         format: "cjs",
-        sourcemap: false,
+        sourcemap: true,
       },
       {
         file: "dist/esm/index.js",
         format: "esm",
-        sourcemap: false,
+        sourcemap: true,
       },
     ],
     plugins: [
@@ -68,8 +68,8 @@ export default [
         exclude: "node_modules/**",
         extensions,
       }),
-      terser(),
-      del({ targets: ["dist/*"] }),
+      // terser(),
+      // del({ targets: ["dist/*"] }),
     ],
   },
   {
